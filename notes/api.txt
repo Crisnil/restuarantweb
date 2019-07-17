@@ -1,0 +1,68 @@
+authenticated api*
+
+/api/security/grant-csrf-token
+/api/user
+/api/owner/upsert-menu
+GET /api/admin/getalluser
+POST /api/admin/approve/:id
+
+
+
+public api*
+http://localhost:3000/api/entrance/register?emailAddress=cacuyado@cec.edu.ph.com&password=pokemon&fullName=crisnil f. acuyado&confirmPassword=pokemon&restaurant=Chicken Ati-atihan
+
+
+GET /api/entrance/login?emailAddress=cacuyado@gmail.com&password=pokemon
+
+GET /api/entrance/signup?emailAddress=cacuyado@gmail.com&password=pokemon&confirmPassword
+
+GET /api/public/restaurantlist
+GET /api/public/ping
+POST /api/public/createorder
+
+GET /api/public/find-menu-by-restaurant
+
+blueprint api*
+
+GET /:model/:id
+  expected response
+  {
+    "amount": 49.99,
+    "id": 1,
+    "createdAt": 1485551132315,
+    "updatedAt": 1485551132315
+  }
+
+PUT /:model/:id/:association/:fk
+POST /:model
+
+POST /foo
+{
+  "name": "Applejack",
+  "hobby": "pickin",
+  "involvedInPurchases": [13,25]
+}
+
+
+GET /purchase?sort=createdAt DESC&limit=30
+
+?where={"name":{"contains":"theodore"}}
+  [
+  {
+   "amount": 49.99,
+   "id": 1,
+   "createdAt": 1485551132315,
+   "updatedAt": 1485551132315
+  },
+  {
+   "amount": 99.99,
+   "id": 47,
+   "createdAt": 1485551158349,
+   "updatedAt": 1485551158349
+  }
+  ]
+
+  PATCH /user/47
+{
+  "hobby": "kickin"
+}

@@ -1,0 +1,33 @@
+{
+  "entry": "src/index.js",
+   "disableCSSModules": false,
+     "publicPath": "/",
+     "hash": true,
+     "theme": {
+
+      },
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        "transform-regenerator"
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime",
+        "transform-regenerator"
+      ]
+    }
+  },
+  "autoprefixer":{
+    "proxy": {
+       "/api": {
+         "target": "http://localhost:3000",
+         "changeOrigin": true,
+           "pathRewrite": { "^/api" : "" }
+       }
+     },
+  },
+}

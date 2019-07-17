@@ -1,0 +1,66 @@
+{
+  "name": "sitnew",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.3",
+    "async": "2.0.1",
+    "babel-core": "6.14.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.2.1",
+    "machinepack-emailaddresses": "^0.4.0",
+    "machinepack-passwords": "^2.3.0",
+    "mdbreact": "^4.3.0",
+    "passport": "^0.4.0",
+    "rc-form": "^2.2.0",
+    "roadhog": "^2.3.0",
+    "sails": "^1.0.1",
+    "sails-hook-orm": "^2.0.0-16",
+    "sails-hook-sockets": "^1.4.0",
+    "sails-mysql": "^1.0.0",
+    "url-loader": "^1.0.1"
+  },
+  "devDependencies": {
+    "@sailshq/eslint": "^4.19.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0",
+    "npm-run-all": "^4.1.2",
+    "pm2": "^2.10.3",
+    "webpack": "^4.6.0",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel client prod",
+    "local": "npm-run-all --parallel client dev",
+    "postinstall": "cd frontend && npm run build",
+    "dev": "sails lift",
+    "prod": "sails lift --prod",
+    "server": "sails lift --prod",
+    "client": "cd frontend && npm start",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
+    "runall": "npm install npm-run-all --save-dev",
+    "pminstall": "npm install pm2",
+    "pm2": "pm2 -n sitneat start npm -- start",
+    "pmlist": "pm2 list",
+    "pm2stop": "pm2 stop all",
+    "pm2delete": "pm2 delete all"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/sitnew.git"
+  },
+  "author": "anonymous node/sails user",
+  "license": "",
+  "engines": {
+    "node": ">=8.11"
+  }
+}

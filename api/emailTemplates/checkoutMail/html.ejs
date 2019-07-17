@@ -1,0 +1,15 @@
+<p>Dear <%=name%>,</p>
+<br/>
+
+<p>Your odered to <%=restaurant%></p>
+<p>Schedule at <%=time%> on <%=date%></p>
+<p>Your order tracking  id is : <%=tracking%></p>
+<p>These following items:</p>
+<ul>
+	<% for(var i=0; i<orders.length; i++) {%>
+	<li><span><%=orders[i].pcs%></span> : <span><%= orders[i].name %></span> - <span>P<%=orders[i].price%></span></li>
+	<% } %>
+</ul>
+<p>Please pay the total amount of <%=totalPrice%></p>
+<br/>
+<p>Thank you for using SitnEat.</p>

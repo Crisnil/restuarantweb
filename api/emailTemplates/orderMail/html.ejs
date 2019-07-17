@@ -1,0 +1,41 @@
+<p>Good day! <%=restaurant%>,</p>
+<br/>
+<h4>Order Notification</h4>
+<br/>
+<p>Costumer: <%=costumer%></p>
+<p>Contact number: <%=mobileNumber%> </p>
+<p>Address: <br/>
+<address><%=address%></address>
+</p>
+<br/>
+<h4>Order details</h4>
+<table border="1">
+	<tr>
+		<th colspan="3">Store: <%=restaurant%></th>
+	</tr>
+	<tr>
+		<th colspan="3">Date and Time: <%=restaurant%></th>
+	</tr>
+	<tr>
+		<th colspan="3">Order # : <%=tracking%></th>
+	</tr>
+	<tr>
+		<td>Qnty</td>
+		<td>Item</td>
+		<td>Amount</td>
+	</tr>
+	<% for(var i=0; i<orders.length; i++) {%>
+	<tr>
+		<td><%=orders[i].pcs%></td>
+		<td><%=orders[i].name%></td>
+		<td>P<%=orders[i].price%></td>
+	</tr>
+	<% } %>
+	<tr>
+		<td colspan="3">Total: <%=totalPrice%></td>
+	</tr>
+</table>
+<br/>
+
+<br/>
+<p>Thank you for using SitnEat.</p>

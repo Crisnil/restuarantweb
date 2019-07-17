@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "name"      : "front",
+      "script"     : "./src/index.js",
+      "interpreter": "none",
+      "args": "cross-env NODE_ENV=production PORT=8000 BROWSER=none roadhog server"
+    }
+  ]
+}
