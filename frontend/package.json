@@ -18,7 +18,7 @@
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "dva": "^2.4.0",
-    "grunt": "^1.0.2",
+    "grunt": "^1.5.2",
     "history": "^4.7.2",
     "http-server": "^0.11.1",
     "immutability-helper": "^2.7.1",
