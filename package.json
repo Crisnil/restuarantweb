@@ -29,7 +29,7 @@
     "sails-hook-organics": "^0.13.0",
     "sails-hook-orm": "^2.1.0",
     "sails-hook-sockets": "^1.5.3",
-    "sails-mysql": "^1.0.0",
+    "sails-mysql": "^3.0.0",
     "shortid": "^2.2.13",
     "uuid": "^3.3.2"
   },
