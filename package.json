@@ -41,7 +41,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "grunt": "^1.0.1",
-    "sails-hook-grunt": "^3.0.2"
+    "sails-hook-grunt": "^5.0.0"
   },
   "scripts": {
     "pm2all": "npm-run-all --parallel pm2backend pm2frontend",
